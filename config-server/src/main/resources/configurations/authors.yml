@@ -1,0 +1,25 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 8081
+
+spring:
+  application:
+    name: authors
+  datasource:
+    url: jdbc:mysql://localhost:3306/authors
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+application:
+  config:
+    books-url: http://localhost:8222/books
+management:
+  tracing:
+    sampling:
+      probability: 1.0
